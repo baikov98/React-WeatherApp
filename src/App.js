@@ -19,7 +19,8 @@ function WeatherDisplay(props) {
               .then(json => {
                 setWeatherData(json)
               })
-      }
+    console.log(1)
+    }, [props.zip]
     )
    
     if (!weatherData) return <div>Loading....</div>
