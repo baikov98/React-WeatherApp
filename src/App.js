@@ -9,7 +9,7 @@ const PLACES = [
 
 function WeatherDisplay(props) {
   const [weatherData, setWeatherData] = useState(null)
-
+  console.log('weather')
   useEffect(() => {
     const zip = props.zip
     const URL = "http://api.openweathermap.org/data/2.5/weather?q=" +
@@ -19,7 +19,7 @@ function WeatherDisplay(props) {
               .then(json => {
                 setWeatherData(json)
               })
-    console.log(1)
+    console.log('Use Effect')
     }, [props.zip]
     )
    
